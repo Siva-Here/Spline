@@ -1,15 +1,22 @@
-/* Ensure the spline container is responsive */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
 .spline-container {
-  width: 100%;
-  height: 100vh; /* Full viewport height */
+  width: 100vw; 
+  height: 100vh; 
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Handle responsiveness */
-@media (max-width: 768px) {
-  .spline-container {
-    height: 70vh; /* Adjust height for mobile view */
-  }
+canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
