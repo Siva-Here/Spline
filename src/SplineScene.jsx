@@ -1,8 +1,9 @@
 import Spline from '@splinetool/react-spline';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 function SplineScene() {
   const splineRef = useRef(null);
+  const [isLoading, setIsLoading] = useState(true); // Track loading state
 
   useEffect(() => {
     const adjustCameraForScreen = () => {
@@ -29,10 +30,28 @@ function SplineScene() {
   }, []);
 
   return (
-    <div className="spline-container">
+    <div className="spline-container" style={{ position: 'relative', height: '100vh' }}>
+      {isLoading && (
+        <div
+          style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            fontSize: '1.5rem',
+            color: '#ffffff',
+          }}
+        >
+          <div className="loading-spinner"></div> {/* Optional spinner */}
+          Loading...
+        </div>
+      )}
       <Spline
         scene="https://prod.spline.design/vBkH7f54MF83U183/scene.splinecode"
-        onLoad={(spline) => (splineRef.current = spline)}
+        onLoad={(spline) => {
+          splineRef.current = spline;
+          setIsLoading(false); // Stop loading when the scene is fully loaded
+        }}
       />
     </div>
   );
