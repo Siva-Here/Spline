@@ -1,0 +1,15 @@
+/* Ensure the spline container is responsive */
+.spline-container {
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Handle responsiveness */
+@media (max-width: 768px) {
+  .spline-container {
+    height: 70vh; /* Adjust height for mobile view */
+  }
+}
