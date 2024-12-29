@@ -37,7 +37,7 @@ function SplineScene() {
   }, []);
 
   return (
-    <div className="spline-container z-1 relative bg-red">
+    <div className="spline-container z-1 relative">
       {isLoading && (
         <div
         className='absolute md:transform md:-translate-x-1/2 md:-translate-y-1/2 text-[1.5rem] text-white'

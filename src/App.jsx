@@ -102,14 +102,14 @@
 
 import './App.css';
 import SplineScene from './SplineScene';
-import ParticlesComponent from './Particlejs';
+// import ParticlesComponent from './Particlejs';
 import Backgound from './Backgound';
 function App() {
   return (
     <div className="app" >
        <Backgound id='back'/>
       <SplineScene />
-      <ParticlesComponent id="particles" />
+      {/* <ParticlesComponent id="particles" /> */}
      
     </div>
   );
