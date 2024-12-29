@@ -1,10 +1,16 @@
 import Spline from '@splinetool/react-spline';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useMemo } from 'react';
 import './App.css';
 
 function SplineScene() {
   const splineRef = useRef(null);
   const [isLoading, setIsLoading] = useState(true); // Track loading state
+
+  // Use useMemo to cache the Spline scene URL
+  const splineSceneUrl = useMemo(
+    () => 'https://prod.spline.design/vBkH7f54MF83U183/scene.splinecode',
+    []
+  );
 
   useEffect(() => {
     const adjustCameraForScreen = () => {
@@ -31,29 +37,23 @@ function SplineScene() {
   }, []);
 
   return (
-    <div className="spline-container z-1 relative"  >
-
+    <div className="spline-container z-1 relative bg-red">
       {isLoading && (
         <div
-          style={{
-            position: 'absolute',
-           
-            transform: 'translate(-50%, -50%)',
-            fontSize: '1.5rem',
-            color: '#ffffff',
-          }}
+        className='absolute md:transform md:-translate-x-1/2 md:-translate-y-1/2 text-[1.5rem] text-white'
         >
           <div className="loading-spinner"></div> {/* Optional spinner */}
           Loading...
         </div>
       )}
       <Spline
-        scene="https://prod.spline.design/vBkH7f54MF83U183/scene.splinecode"
+        scene={splineSceneUrl}
         onLoad={(spline) => {
           splineRef.current = spline;
           setIsLoading(false); // Stop loading when the scene is fully loaded
-        }} style={{
-          zIndex:"2"
+        }}
+        style={{
+          zIndex: '2',
         }}
       />
     </div>

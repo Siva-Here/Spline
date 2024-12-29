@@ -37,7 +37,7 @@ const ParticlesComponent = (props) => {
           value: "transparent",
         },
       },
-      fpsLimit: 120,
+      fpsLimit: 150,
       interactivity: {
         events: {
           onClick: {
@@ -64,7 +64,7 @@ const ParticlesComponent = (props) => {
           value: "#38B2AC",
         },
         links: {
-          color: "#38B2AC",
+          color: "",
           distance: 150,
           enable: true,
           opacity: 0.3,
