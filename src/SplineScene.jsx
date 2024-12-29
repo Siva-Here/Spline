@@ -1,5 +1,6 @@
 import Spline from '@splinetool/react-spline';
 import { useEffect, useRef, useState } from 'react';
+import './App.css';
 
 function SplineScene() {
   const splineRef = useRef(null);
@@ -30,7 +31,8 @@ function SplineScene() {
   }, []);
 
   return (
-    <div className="spline-container" >
+    <div className="spline-container z-1 relative"  >
+
       {isLoading && (
         <div
           style={{
@@ -50,6 +52,8 @@ function SplineScene() {
         onLoad={(spline) => {
           splineRef.current = spline;
           setIsLoading(false); // Stop loading when the scene is fully loaded
+        }} style={{
+          zIndex:"2"
         }}
       />
     </div>

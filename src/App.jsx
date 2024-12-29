@@ -102,11 +102,13 @@
 
 import './App.css';
 import SplineScene from './SplineScene';
-
+import ParticlesComponent from './Particlejs';
 function App() {
   return (
     <div className="app" >
       <SplineScene />
+      <ParticlesComponent id="particles" />
+
     </div>
   );
 }
