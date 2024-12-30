@@ -8,7 +8,7 @@ const Preloader = ({ onEnter }) => {
     setIsClicked(true);
     setTimeout(() => {
       onEnter(); // Trigger after 10 seconds
-    }, 5000);
+    }, 3500);
   };
 
   return (
@@ -21,10 +21,10 @@ const Preloader = ({ onEnter }) => {
         alt="Enter"
       />
       {!isClicked && (
-       <div className="w-full absolute left-0 top-0 h-screen flex items-center justify-center bg-white bg-opacity-5 backdrop-blur-lg z-10">
+       <div   onClick={onClickHandler}
+       className="w-full absolute left-0 top-0 h-screen flex items-center justify-center bg-white bg-opacity-5 backdrop-blur-lg z-10">
          <button
           className="enter-btn  text-white font-bold px-2 py-1  z-50 rounded-md  text-[50px]"
-          onClick={onClickHandler}
         >
           Enter
         </button>

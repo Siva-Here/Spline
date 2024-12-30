@@ -6,9 +6,9 @@ function SplineScene() {
   const splineRef = useRef(null);
   const [isLoading, setIsLoading] = useState(true); // Track loading state
 
-  // Use useMemo to cache the Spline scene URL
-  const splineSceneUrl = useMemo(
-    () => 'https://prod.spline.design/vBkH7f54MF83U183/scene.splinecode',
+  // Use useMemo to cache the Spline scene file path
+  const splineScenePath = useMemo(
+    () => `/assets/scene.splinecode`,
     []
   );
 
@@ -39,15 +39,13 @@ function SplineScene() {
   return (
     <div className="spline-container z-1 relative">
       {isLoading && (
-        <div
-        className='absolute md:transform md:-translate-x-1/2 md:-translate-y-1/2 text-[1.5rem] text-white'
-        >
+        <div className="absolute md:transform md:-translate-x-1/2 md:-translate-y-1/2 text-[1.5rem] text-white">
           <div className="loading-spinner"></div> {/* Optional spinner */}
           Loading...
         </div>
       )}
       <Spline
-        scene={splineSceneUrl}
+        scene={splineScenePath}
         onLoad={(spline) => {
           splineRef.current = spline;
           setIsLoading(false); // Stop loading when the scene is fully loaded
