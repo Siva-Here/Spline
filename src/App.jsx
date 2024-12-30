@@ -97,20 +97,28 @@
 // }
 
 // export default App;
-
-
-
+import  { lazy, Suspense } from 'react';
 import './App.css';
-import SplineScene from './SplineScene';
-import ParticlesComponent from './Particlejs';
-import Backgound from './Backgound';
+
+// Lazy load components
+const SplineScene = lazy(() => import('./SplineScene'));
+const ParticlesComponent = lazy(() => import('./Particlejs'));
+const Backgound = lazy(() => import('./Backgound'));
+
 function App() {
   return (
-    <div className="app" >
-       <Backgound id='back'/>
-      <SplineScene />
-      <ParticlesComponent id="particles" />
-     
+    <div className="app">
+      <Suspense fallback={<div className="loading">Loading background...</div>}>
+        <Backgound id="back" />
+      </Suspense>
+
+      <Suspense fallback={<div className="loading">Loading scene...</div>}>
+        <SplineScene />
+      </Suspense>
+
+      <Suspense fallback={<div className="loading">Loading particles...</div>}>
+        <ParticlesComponent id="particles" />
+      </Suspense>
     </div>
   );
 }
