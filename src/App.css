@@ -183,7 +183,6 @@ canvas {
 @media screen and (max-width: 767px) {
   .spline-container {
     height: 100vh;
-    transform: scale(0.8); 
     width: 100%;
     margin-top: 30%;
   }

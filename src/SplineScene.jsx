@@ -35,12 +35,7 @@ function SplineScene() {
 
   return (
     <div className="spline-container z-1 relative">
-      {isLoading && (
-        <div className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 text-[1.5rem] text-white">
-          <div className="loading-spinner"></div> {/* Optional spinner */}
-          Loading...
-        </div>
-      )}
+      
       <Spline
         scene={isMobile ? splineSceneMobile : splineSceneDesktop} // Use mobile or desktop scene
         onLoad={(spline) => {
