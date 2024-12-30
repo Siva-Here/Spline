@@ -59,7 +59,7 @@ function SplineScene() {
           Loading...
         </div>
       )}
-      {!isMobile || !isLoading ? (
+      { !isLoading ? (
         <Spline
           scene={splineSceneUrl}
           onLoad={(spline) => {
