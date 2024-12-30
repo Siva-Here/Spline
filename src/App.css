@@ -180,13 +180,24 @@ canvas {
 }
 
 /* Mobile*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .spline-container {
     height: 100vh;
     transform: scale(0.8); 
+    width: 100%;
+    margin-top: 30%;
   }
 }
-
+.section {
+  position: relative;
+  min-height: 100vh;
+  background: #1e262a;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding-top: 70px;
+}
 #particles {
   position: fixed;
   top: 0;
