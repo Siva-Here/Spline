@@ -8,7 +8,7 @@ const Preloader = ({ onEnter }) => {
     setIsClicked(true);
     setTimeout(() => {
       onEnter(); // Trigger after 10 seconds
-    }, 3500);
+    }, 2600);
   };
 
   return (

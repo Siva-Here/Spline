@@ -222,8 +222,8 @@ canvas {
 
 
 .imagesenterclick{
-  transition: all;
-  animation: zoom 3.5s linear 0.2s 1 forwards;
+  transition: linear;
+  animation: zoom 5s linear 0.2s 1 forwards;
 }
 .enter-btn{
   transition: all;
@@ -246,7 +246,7 @@ canvas {
   }
 
   100%{
-      transform: scale(340%);
+      transform: scale(640%);
       opacity: 0.5;
       display: hidden;
   }
