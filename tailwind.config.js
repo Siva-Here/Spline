@@ -5,7 +5,9 @@ export const content = [
 ];
 export const theme = {
   extend: {
-    
+    fontFamily: {
+      bruno: ['Bruno Ace', 'sans-serif'],
+    },
   },
 };
 export const plugins = [];
