@@ -49,8 +49,7 @@ canvas {
   .spline-container {
     width: 100vw;
     height: 70vh; /* Reduce height slightly for full visibility */
-    
-    margin-right: 100px;
+    margin-top: 30%;
     margin-left: 1px;
   }
   canvas {

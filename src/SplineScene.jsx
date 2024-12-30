@@ -53,7 +53,7 @@ function SplineScene() {
           setIsLoading(false); // Stop loading when the scene is fully loaded
         }}
         style={{
-          zIndex: '2',
+          zIndex: '5',
         }}
       />
     </div>
