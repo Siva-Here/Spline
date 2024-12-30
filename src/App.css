@@ -28,9 +28,35 @@ html, body {
   height: 100%;
   overflow: hidden;
 }
+.app {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.preloader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1E1C1C;
+  z-index: 1000;
+  transition: opacity 0.5s ease;
+}
+.preloader-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.preloader-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.5s ease;
+}
 
 .spline-container {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -47,11 +73,10 @@ canvas {
 /* Adjust height and width for mobile screens */
 @media screen and (max-width: 768px) {
   .spline-container {
-    width: 100vw;
+    width: 100%;
     height: 70vh; /* Reduce height slightly for full visibility */
     
-    margin-right: 100px;
-    margin-left: 1px;
+    
   }
   canvas {
     width: 100%;
@@ -79,7 +104,7 @@ canvas {
   }
 }
 #particles canvas {
-  z-index: -2;
+  z-index: -3;
   height: 100%;
   width: 100%;
   position:absolute;
@@ -192,3 +217,45 @@ canvas {
       );
   }
 }
+
+
+
+
+.imagesenterclick{
+  transition: all;
+  animation: zoom 5s linear 0.2s 1 forwards;
+}
+.enter-btn{
+  transition: all;
+  animation: blink 2s linear 0.3s infinite forwards;
+}
+@keyframes blink {
+  0%{
+      opacity: 1;
+  }
+  50%{
+      opacity: 0;
+  }
+  100%{
+      opacity: 1;
+  }
+}
+@keyframes zoom {
+  0%{
+      transform: scale(100%);
+  }
+
+  100%{
+      transform: scale(300%);
+      opacity: 0.5;
+      display: hidden;
+  }
+
+}
+.preloader{
+  position: absolute;
+  z-index: 50;
+}
+
+
+
