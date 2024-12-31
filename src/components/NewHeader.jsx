@@ -2,18 +2,22 @@ import React from "react";
 import desktop2 from "../assets/desktop2.png";
 import tab2 from "../assets/tab2.png";
 import mobile2 from "../assets/mobile2.png"
+import { useNavigate } from "react-router-dom";
 const NewHeader = () => {
+  const navigate=useNavigate();
   return (
     <div>
       <div className="relative bg-black">
         <div className="hidden lg:block">
-          <div className="z-[100] fixed top-[33px] left-0 w-full h-auto">
+          <div className="z-100 fixed top-[33px] left-0 w-full h-auto">
             <img src={desktop2} className="w-full h-auto" />
           </div>
           <div className="absolute w-full top-[20px] left-0 text-white flex flex-row justify-around">
-            <div>Menu</div>
+            <div onClick={()=>{
+              navigate('/menu')
+            }} className="text-[20px] font-semibold">Menu</div>
             <div className="text-5xl font-semibold">TECKZITE</div>
-            <div>Login</div>
+            <div className="text-[20px] font-semibold">Login</div>
           </div>
         </div>
         <div className="hidden md:block lg:hidden">

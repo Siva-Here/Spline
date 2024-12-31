@@ -61,30 +61,16 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+  margin-top:50px;
 
+  
+}
 canvas {
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
 }
-
-/* Adjust height and width for mobile screens */
-@media screen and (max-width: 768px) {
-  .spline-container {
-    width: 100%;
-    height: 70vh; /* Reduce height slightly for full visibility */
-    
-    
-  }
-  canvas {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Ensure the object fits without cropping */
-  }
-}
-
 
 .loading-spinner {
   width: 50px;
@@ -124,7 +110,6 @@ canvas {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
 }
 
 /* Section styling */
@@ -184,7 +169,7 @@ canvas {
   .spline-container {
     height: 100vh;
     width: 100%;
-    margin-top: 30%;
+    margin-top: 0;
   }
 }
 .section {
@@ -267,5 +252,11 @@ canvas {
   z-index: 50;
 }
 
+
+.menu-btn{
+  font-family: "Keania One", serif;
+  font-size: 24px;
+  font-weight: 100;
+} 
 
 
