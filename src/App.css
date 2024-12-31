@@ -170,6 +170,10 @@ canvas {
     height: 100vh;
     width: 100%;
     margin-top: 0;
+    overflow: hidden;
+  }
+  .canvas{
+    transform: scale(100px);
   }
 }
 .section {
