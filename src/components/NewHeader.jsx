@@ -1,7 +1,7 @@
 import React from "react";
-import desktop2 from "../assets/desktop2.png";
-import tab2 from "../assets/tab2.png";
-import mobile2 from "../assets/mobile2.png"
+import desktop2 from "../assets/desktop.svg";
+import tab2 from "../assets/ipad.svg";
+import mobile2 from "../assets/mobile.svg"
 import { useNavigate } from "react-router-dom";
 const NewHeader = () => {
   const navigate=useNavigate();
