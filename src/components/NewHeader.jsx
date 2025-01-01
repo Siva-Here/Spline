@@ -1,48 +1,30 @@
 import React from "react";
-import desktop from "../assets/menu/header.svg";
-import tab from "../assets/menu/tabhead.svg";
-import mobile from "../assets/menu/mobilehead.svg"
+import header from "../assets/menu/header2.svg";
+import tlogo from "../assets/menu/logo.png"
 import { useNavigate } from "react-router-dom";
 import { IoMenu } from "react-icons/io5";
-import tlogo from "../assets/menu/logo.png"
-
+import { CgProfile } from "react-icons/cg";
 const NewHeader = () => {
   const navigate=useNavigate();
   return (
     <div>
-      <div className="relative bg-black">
-        <div className="hidden lg:block">
-          <div className="z-100 fixed left-0 w-full h-auto">
-            <img src={desktop} className="w-full h-auto" />
+      <div className="relative bg-black z-[2001]">
+        <div className="">
+          <div className=" fixed top-[-5px] left-0 w-full h-[40px] md:h-[70px] md:w-full mt-[18px] lg:mt-0">
+            <img src={header} className="w-full h-full object-cover" />
           </div>
-          <div className="absolute w-full  left-0 text-white flex flex-row justify-between px-[20px]">
+          <div className="menu absolute w-full left-0  text-white flex flex-row justify-between lg:justify-around  ">
             <div onClick={()=>{
               navigate('/menu')
-            }} className="text-[40px] font-semibold mt-[10px] cursor-pointer"><IoMenu /></div>
-            <div className="h-[50px] w-[200px] mt-[-10px]"><img src={tlogo} /></div>
-            <div className="text-[20px] font-semibold mt-[10px]">Login</div>
+            }} className="md:text-[35px] text-[25px] font-semibold mt-[-14px] cursor-pointer p-5 lg:p-3"><IoMenu /></div>
+            <div className="h-[40px] w-[120px] mt-[-8px] md:w-[160px] lg:w-[180px]  ml-[-30px] md:ml-0 md:mt-[-5px] lg:mt-[-12px]"><img src={tlogo} /></div>
+            <div className="text-[25px] md:text-[30px] font-semibold p-2 mb-[-15px] md:hidden"><CgProfile />
+            </div>
+            <div className="text-[15px] md:text-[20px] font-semibold p-5 hidden md:block mt-[-10px]  lg:p-3">Login
+            </div>
           </div>
         </div>
-        <div className="hidden md:block lg:hidden">
-          <div className="z-[100] fixed  left-0 w-full h-auto">
-            <img src={tab} className="w-full h-auto" />
-          </div>
-          <div className="absolute w-full top-[0px] left-0 text-white flex flex-row justify-between px-[20px]">
-            <div className="text-[30px] font-semibold"><IoMenu /></div>
-            <div  className="h-[30px] w-[150px] mt-[-10px]"><img src={tlogo} /></div>
-            <div className="font-semibold text-[20px]">Login</div>
-          </div>
-        </div>
-        <div className=" sm:block md:hidden">
-          <div className="z-[100] fixed left-0 w-full h-auto">
-            <img src={mobile} className="w-full h-auto" />
-          </div>
-          <div className="absolute w-full  left-0 text-white flex flex-row justify-between px-[20px]">
-            <div className="text-sm "><IoMenu /></div>
-            <div className="h-[30px] w-[100px] mt-[-10px] ml-[30px]"><img src={tlogo} /></div>
-            <div className="text-[14px] mt-[-5px]">Login</div>
-          </div>
-        </div>
+     
       </div>
     </div>
   );

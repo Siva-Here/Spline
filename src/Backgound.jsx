@@ -19,10 +19,10 @@ const Background = () => {
   return (
     <div className="back">
       <section className="section">
-        <h1 className="title text-[3em] md:text-[7em] lg:text-[10em] font-bruno hidden md:block">
+        <h1 className="title text-[3em] md:text-[7em] lg:text-[7em] font-bruno hidden md:block">
           TECKZITE
         </h1>
-        <h1 className="title text-[3em] md:text-[7em] lg:text-[10em] font-bruno hidden md:block">
+        <h1 className="title text-[3em] md:text-[7em] lg:text-[7em] font-bruno hidden md:block">
           2K25
         </h1>
       </section>

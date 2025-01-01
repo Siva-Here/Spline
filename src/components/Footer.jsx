@@ -1,33 +1,25 @@
 import React from "react";
-import desktop from "../assets/menu/footer.svg";
-import tab from "../assets/menu/tabfoot.svg";
-import mobile from "../assets/menu/mobilefoot.svg"
+import footer from "../assets/menu/header2.svg";
 import { useNavigate } from "react-router-dom";
+
 const NewFooter = () => {
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   return (
-    
-      <div className="relative bg-black">
-        <div className="hidden lg:block">
-          <div className="z-[2000] fixed  lg:bottom-[-30px] bg-opacity-100  left-0 w-full h-auto scale-y-[-1]">
-            <img src={desktop} className="w-full h-auto" />
-          </div>
-     
-              
+    <div className="relative footer">
+      
+         <div className="z-[2000] fixed top-[-5px] left-0 w-full h-[30px] md:h-[70px] md:w-full hidden md:block">
+                  <div className="  fixed bottom-0 left-0 w-full  h-[30px] scale-y-[-1] md:h-[70px]">
+                    <img src={footer} className="w-full h-full object-cover" />
+                  </div>
+                  <div className=" fixed w-full left-0 bottom-0 text-white flex flex-row justify-between items-center lg:justify-around p-2 ">
+                    <div className=" text-[18px] cursor-pointer ">....</div>
+                    <div className=" text-[18px] md:pl-[30px] ">Copyright © RGUKT, Nuzvid
+                    </div>
+                    <div className=" text-[18px]  hidden md:block ">Contact
+                    </div>
+                  </div>      
              </div>
-             <div className="hidden md:block lg:hidden">
-               <div className="z-[100] fixed bottom-0 left-0 w-full h-auto scale-y-[1]">
-                 <img src={tab} className="w-full h-auto" />
-               </div>
-              
-             </div>
-             <div className=" sm:block md:hidden">
-               <div className="z-[100] fixed bottom-[-10px] left-0 w-full h-auto scale-y-[1]">
-                 <img src={mobile} className="w-full h-auto" />
-               </div>
-              
-             </div>
-      </div>
+    </div>
     
   );
 };

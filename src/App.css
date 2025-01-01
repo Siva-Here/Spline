@@ -210,8 +210,8 @@ canvas {
   color: transparent;
   cursor: default;
   transition: color 0.3s linear;
-  -webkit-text-stroke: 2px aqua; /* Outline the text in aqua color */
-  text-shadow: 0 0 20px aqua, 0 0 40px aqua;
+  -webkit-text-stroke: 2px #0A69A5; /* Outline the text in aqua color */
+  text-shadow: 0 0 20px #0A69A5, 0 0 40px #0A69A5;
 }
 
 /* Light effect */
@@ -268,3 +268,13 @@ canvas {
   width: 100%;
   position:absolute;
 }
+.footer{
+  font-family: "Keania One", serif;
+  font-size: 24px;
+  font-weight: 100;
+} 
+.menu{
+  font-family: "Keania One", serif;
+  font-size: 24px;
+  font-weight: 100;
+} 
