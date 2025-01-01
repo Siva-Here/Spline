@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import {Router,Routes,Route,BrowserRouter } from 'react-router-dom'
-import { Menu } from './Pages/Menu';
+import  {Menu} from './Pages/Menu';
 import Landing from './Landing';
 import MainLanding from './Pages/MainLanding';
 function App() {

@@ -95,63 +95,8 @@ canvas {
   width: 100%;
   position:absolute;
 }
-.back{
-  z-index: -2;
-  height: 100%;
-  width: 100%;
-  position:absolute;
-}
 
 
-
-
-/*Background*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Section styling */
-.section {
-  position: relative;
-  min-height: 100vh;
-  background: #1e262a;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Title styling */
-.title {
-  color: transparent;
-  cursor: default;
-  transition: color 0.3s linear;
-  -webkit-text-stroke: 2px aqua; /* Outline the text in aqua color */
-  text-shadow: 0 0 20px aqua, 0 0 40px aqua;
-}
-
-/* Light effect */
-.light-effect {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  background: radial-gradient(
-      circle at var(--x) var(--y),
-      transparent 10%,
-      rgba(30, 38, 42, 0.95) 20%
-  );
-}
-
-/* Text color change on light hover */
-.section:hover .title {
-  color: aqua;
-  mix-blend-mode: difference;
-}
 
 
 
@@ -176,16 +121,7 @@ canvas {
     transform: scale(100px);
   }
 }
-.section {
-  position: relative;
-  min-height: 100vh;
-  background: #1e262a;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-  padding-top: 70px;
-}
+
 #particles {
   position: fixed;
   top: 0;
@@ -201,25 +137,6 @@ canvas {
       opacity: 0.8;
   }
 }
-
-@media screen and (max-width: 768px) {
-  .title {
-      -webkit-text-stroke: 1px aqua;
-      text-shadow: 0 0 10px aqua, 0 0 20px aqua;
-  }
-
-  .light-effect {
-      background: radial-gradient(
-          circle at var(--x) var(--y),
-          transparent 5%,
-          rgba(30, 38, 42, 0.95) 15%
-      );
-  }
-}
-
-
-
-
 .imagesenterclick{
   transition: linear;
   animation: zoom 5s linear 0.2s 1 forwards;
@@ -278,4 +195,76 @@ canvas {
   100%{
       transform: translateY(0);
   }
+}
+
+/*background*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Title styling */
+.title {
+  color: transparent;
+  cursor: default;
+  transition: color 0.3s linear;
+  -webkit-text-stroke: 2px aqua; /* Outline the text in aqua color */
+  text-shadow: 0 0 20px aqua, 0 0 40px aqua;
+}
+
+/* Light effect */
+.light-effect {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(
+      circle at var(--x) var(--y),
+      transparent 10%,
+      rgba(30, 38, 42, 0.95) 20%
+  );
+}
+
+.section {
+  position: relative;
+  min-height: 100vh;
+  background: #1e262a;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding-top: 70px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .title {
+      -webkit-text-stroke: 1px aqua;
+      text-shadow: 0 0 10px aqua, 0 0 20px aqua;
+  }
+
+  .light-effect {
+      background: radial-gradient(
+          circle at var(--x) var(--y),
+          transparent 5%,
+          rgba(30, 38, 42, 0.95) 15%
+      );
+  }
+}
+/* Text color change on light hover */
+
+.section:hover .title {
+  color: aqua;
+  mix-blend-mode: difference;
+}
+
+.back{
+  z-index: -2;
+  height: 100%;
+  width: 100%;
+  position:absolute;
 }
